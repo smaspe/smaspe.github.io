@@ -22,12 +22,12 @@ Parceling a `ContentValues` only parcels the underlying `HashMap`, and unparceli
 
 ### Map to ContentValues
 
-~~~ java
+``` java
 Parcel parcel = obtain();
 parcel.writeMap(map);
 parcel.setDataPosition(0);
 ContentValues values = ContentValues.CREATOR.createFromParcel(parcel);
-~~~
+```
 
 For example, your map could come from a `JSONObject`:
 
