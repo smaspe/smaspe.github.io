@@ -1,0 +1,57 @@
+---
+layout: post
+title:  "Login Activity workflow"
+date:   2013-06-12
+categories: android, demo, FA-SO-Q
+---
+A new category: answers to questions frequently asked on StackOverflow.
+
+Some questions often come back on StackOverflow, and I think it is sometimes useful to present a complete and detailed explanation.
+
+# The Question
+
+Today, the question is:
+
+> [Android] What workflow around a Login activity?
+
+As usual, snippets are pasted along the way, and the complete working code used here is to be found on github, <https://github.com/smaspe/LoginFlow>
+
+# An Answer
+
+An application can require the user to be logged in for part or all of the application, for key functions or as a pre-requisite. In one case or the other, I tend to consider the login as a separated process from the logic of the app. Typically a function such a posting content can require to be logged in, but does not specify what being logged in means.
+
+In this example, we have a basic application, composed of `FirstActivity` and `SecondActivity`, and a `RestrictedActivity` that requires to be logged in to access.
+
+The login process is handled by `LoginActivity`. `LoginActivity` is called with `startActivityForResult`, and the result is handled in `onActivityResult`.
+
+{% gist smaspe/5750100 %}
+
+Any `Activity` can now call this `LoginActivity`. A simple way is to extend `LoginableActivity`, and to bind `login(View)` to a button. (Which is done in this demo by the inclusion of the `login.xml` layout in First and Second activities.)
+
+The `RestrictedActivity` extends `LoginableActivity` to call `login(View)` and benefit from the `onActivityResult` processing.
+
+{% gist smaspe/5750175 %}
+
+In `onActivityResult`, `loggedIn` can be tested (or the `resultCode` can be tested as well), and the activity can be finished at this point if the requirement of being logged in is not met.
+
+At this point, we have Activities able to call the login process, and an `Activity` that can depend on being logged in to be launched (and won't launch until logged in). Moreover, the login process in itself does not interfere with the workflow of the application.
+
+As for the `LoginActivity`, it can be anything. It is only required to return `RESULT_OK` in case of a successful login. In a real-world case, it would also probably save the username somewhere and update some `SharedPreferences`. Here, it simply randomly fails 70% of the time (!).
+
+{% gist smaspe/5750268 %}
+
+The `setResult()` and `finish()` can be called from pretty much anywhere, typically that would be in the `onPostExecute()` of the `AsyncTask` that handles the server connection to validate the login and password.
+
+The `LoginActivity` can also be the first activity of a more complex process involving several screens.
+
+# Conclusion
+
+I like this solution (!) because it is simple and modular.
+
+It makes sense to do it this way from an Android perspective. `startActivityForResult()` is made for calling independent tasks that return a result.
+
+The login process can be patched into pretty much any login system.
+
+Any `Activity` can access it with very little code (extending `LoginableActivity` is not mandatory, it is only convenient in this example).
+
+It does not have any impact on the Activity stack of the application, as the `LoginActivity` is pushed on the top of the stack and removed once the logging in is canceled or completed.
