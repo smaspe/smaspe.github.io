@@ -8,15 +8,15 @@ categories: android, demo
 
 A few days ago, during the Google I/O, Ficus Kilkpatrick presented Volley. Volley is an HTTP library that aims at removing lots of boilerplate code, simplifying the handling of images in lists, be faster, abstract the complexity of one or another HTTP client.
 
-The presentation is here: https://developers.google.com/events/io/sessions/325304728
+The presentation is here: <https://developers.google.com/events/io/sessions/325304728>
 
-The code is here: https://android.googlesource.com/platform/frameworks/volley/
+The code is here: <https://android.googlesource.com/platform/frameworks/volley/>
 
 `git clone https://android.googlesource.com/platform/frameworks/volley` clones a valid Eclipse project ready to integrate in your app.
 
-This post is a quick demo of the basic functions of Volley. It demonstrates the use of Volley with the JSON RESTful API from Sna.pr (see http://developers.sna.pr/docs/api_basics/). It will fetch JSON data from Sna.pr, extract the URLs to the images, display thumbnails in a GridView, and display the large image in another Activity.
+This post is a quick demo of the basic functions of Volley. It demonstrates the use of Volley with the JSON RESTful API from Sna.pr (see <http://developers.sna.pr/docs/api_basics/>). It will fetch JSON data from Sna.pr, extract the URLs to the images, display thumbnails in a GridView, and display the large image in another Activity.
 
-All the code used in this demo is available here: https://github.com/smaspe/SnaprVolley.
+All the code used in this demo is available here: <https://github.com/smaspe/SnaprVolley>.
 
 # Initialization
 
