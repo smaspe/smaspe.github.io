@@ -2,7 +2,7 @@
 layout: post
 title:  "Download a File"
 date:   2013-06-10
-categories: android, one-liner
+categories: android one-liner
 ---
 
 One-liners are pieces of code that allow to rapidly perform a rather complex function in only one line.

@@ -2,7 +2,7 @@
 layout: post
 title:  "First steps with LibGDX"
 date:   2013-07-18
-categories: android, demo, game
+categories: android demo game
 ---
 # Introduction
 
