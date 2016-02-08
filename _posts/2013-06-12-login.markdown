@@ -2,7 +2,7 @@
 layout: post
 title:  "Login Activity workflow"
 date:   2013-06-12
-categories: android demo FA-SO-Q
+tags: android demo FA-SO-Q
 ---
 A new category: answers to questions frequently asked on StackOverflow.
 

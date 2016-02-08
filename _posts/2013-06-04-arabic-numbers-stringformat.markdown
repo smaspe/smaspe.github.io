@@ -2,7 +2,7 @@
 layout: post
 title:  "String.format and Arabic numbers"
 date:   2013-06-04
-categories: android tips
+tags: android tips
 ---
 # Introduction
 

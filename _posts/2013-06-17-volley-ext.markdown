@@ -2,7 +2,7 @@
 layout: post
 title:  "An extension to Volley"
 date:   2013-06-17
-categories: android demo
+tags: android demo
 ---
 # Introduction
 

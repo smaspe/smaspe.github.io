@@ -2,7 +2,7 @@
 layout: post
 title:  "Storage is simple – Part 1, SQL"
 date:   2013-07-09
-categories: android demo sqlite
+tags: android demo sqlite
 ---
 # Introduction
 

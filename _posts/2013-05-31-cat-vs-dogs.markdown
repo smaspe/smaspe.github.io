@@ -2,7 +2,7 @@
 layout: post
 title:  "Cat versus Dogs!"
 date:   2013-05-31
-categories: algorithm
+tags: algorithm
 ---
 A few months ago I stumbled upon http://www.spotify.com/us/jobs/tech/
 

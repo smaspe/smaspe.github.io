@@ -2,7 +2,7 @@
 layout: post
 title:  "Map to ContentValues (Abusing Parcelable)"
 date:   2013-05-31
-categories: android
+tags: android
 ---
 This post is about removing some of the pain from inserting JSON into SQLite (or any Map thing to any ContentValues-based system) and vice-versa.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "JSON to ListView"
 date:   2013-08-06
-categories: android demo FA-SO-Q
+tags: android demo FA-SO-Q
 ---
 # Introduction
 

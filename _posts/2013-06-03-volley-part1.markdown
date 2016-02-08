@@ -2,7 +2,7 @@
 layout: post
 title:  "A Volley introduction - Part 1"
 date:   2013-06-03
-categories: android demo
+tags: android demo
 ---
 # Introduction
 
