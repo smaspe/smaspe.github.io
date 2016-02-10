@@ -15,6 +15,7 @@ It helps you avoid all those loop, removes lots of conditions, and gets the code
 This article presents quickly what functional programming is, and how it is useful, in order to introduce the [functional programming library](https://github.com/smaspe/FunctionalIterables) that I wrote for Java 7, and that I'll present next time.
 
 There are 2 important things you want to have for functional programming
+
 - First-class functions
 - Higher-order functions
 
@@ -77,6 +78,7 @@ There are plenty other such functions.
 Until Java 7, the way to reference a function is to create an interface that has one function, then create an anonymous implementation of that interface, then call the function on that object. Think about all those `OnClickListener`, for example.
 
 In Java 8, 3 new things appeared:
+
 - Functional Interfaces. An interface with a single method. The function and the interface are synecdoches
 - Lambdas. The`() -> {}` notation basically allows you to implement a functional interface without the verbosity
 - Function reference. The `::` notation allows you to refer directly to a function instead of implementing a functional interface.
