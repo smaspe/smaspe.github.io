@@ -65,7 +65,7 @@ It replaces the more verbose
 ```python
 res = []
 for i in [1, 2, 3]:
-  res.append(square(1))
+  res.append(square(i))
 ```
 
 There are plenty other such functions.
