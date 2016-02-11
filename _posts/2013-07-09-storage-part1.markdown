@@ -3,6 +3,7 @@ layout: post
 title:  "Storage is simple – Part 1, SQL"
 date:   2013-07-09
 tags: android demo sqlite
+description: A quick take on how to design a very small storage library 
 ---
 # Introduction
 

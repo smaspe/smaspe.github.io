@@ -3,6 +3,7 @@ layout: post
 title:  "Cat versus Dogs!"
 date:   2013-05-31
 tags: algorithm
+description: Spotify likes puzzles
 ---
 A few months ago I stumbled upon http://www.spotify.com/us/jobs/tech/
 

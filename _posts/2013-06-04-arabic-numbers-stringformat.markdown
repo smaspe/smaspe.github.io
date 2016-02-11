@@ -3,6 +3,7 @@ layout: post
 title:  "String.format and Arabic numbers"
 date:   2013-06-04
 tags: android tips
+description: Avoid a simple localization mistake by explicitly using a Locale
 ---
 # Introduction
 

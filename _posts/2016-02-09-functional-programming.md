@@ -5,7 +5,9 @@ date:   2016-02-09
 tags:
 - java
 - functional programming
+description: Functional Programming is nice.
 ---
+
 # Introduction
 
 Functional Programming is nice.

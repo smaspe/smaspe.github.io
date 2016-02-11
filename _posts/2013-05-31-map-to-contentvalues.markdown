@@ -3,6 +3,7 @@ layout: post
 title:  "Map to ContentValues (Abusing Parcelable)"
 date:   2013-05-31
 tags: android
+description: Easily insert generic data in SQLite
 ---
 This post is about removing some of the pain from inserting JSON into SQLite (or any Map thing to any ContentValues-based system) and vice-versa.
 

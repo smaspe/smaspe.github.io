@@ -3,6 +3,7 @@ layout: post
 title:  "First steps with LibGDX"
 date:   2013-07-18
 tags: android demo game
+description: Designing a board game using LibGDX
 ---
 # Introduction
 

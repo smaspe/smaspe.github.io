@@ -3,6 +3,7 @@ layout: post
 title:  "Download a File"
 date:   2013-06-10
 tags: android one-liner
+description: Quick one-liner to fetch a file in Java/Android
 ---
 
 One-liners are pieces of code that allow to rapidly perform a rather complex function in only one line.

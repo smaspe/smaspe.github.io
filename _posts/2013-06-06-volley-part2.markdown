@@ -3,6 +3,7 @@ layout: post
 title:  "A Volley introduction - Part 2"
 date:   2013-06-06
 tags: android demo
+description: More advanced use of Volley
 ---
 # Introduction
 

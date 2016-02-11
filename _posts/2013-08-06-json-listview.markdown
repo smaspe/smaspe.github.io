@@ -3,6 +3,7 @@ layout: post
 title:  "JSON to ListView"
 date:   2013-08-06
 tags: android demo FA-SO-Q
+description: Where the author goes on a journey to bring the JSON data into the grand ListView
 ---
 # Introduction
 

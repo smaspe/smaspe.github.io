@@ -3,6 +3,7 @@ layout: post
 title:  "Login Activity workflow"
 date:   2013-06-12
 tags: android demo FA-SO-Q
+description: My take on what a login flow could be on Android
 ---
 A new category: answers to questions frequently asked on StackOverflow.
 

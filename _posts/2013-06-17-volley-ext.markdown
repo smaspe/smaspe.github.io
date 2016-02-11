@@ -3,6 +3,7 @@ layout: post
 title:  "An extension to Volley"
 date:   2013-06-17
 tags: android demo
+description: Extending Volley for fun and profit
 ---
 # Introduction
 
