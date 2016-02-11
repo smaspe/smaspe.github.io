@@ -9,9 +9,12 @@ github_username:  smaspe
 
 # Build settings
 markdown: kramdown
+
 # extras
 gems:
   - jekyll-gist
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 kramdown:
   input: GFM
