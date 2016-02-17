@@ -1,0 +1,4 @@
+- `void` is not a type
+- operators are not functions
+- primitives
+- `List` is broken
