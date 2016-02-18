@@ -1,6 +1,8 @@
 I am not a morning person. But why sleep when the sun is up?
 
-Enters the sun clock, which tells you:
+I decided to try and follow the rythm of the sun. Somehow it seems to make more sense than arbitrary times like we have, that on top of that change twice half way through the year for no apparent reason.
+
+Enters the [sun clock](link to the play store goes here), which tells you:
 - When the sun rises
 - When you should go to bed to get a good night sleep and get up with the sun
 
