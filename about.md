@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-More things later. Namely, porting the old articles from [the old blog](https://smaspe.wordpress.com)(!)
+More things later. Probably a short bio, certainly my resumé in French and English.
