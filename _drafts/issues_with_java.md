@@ -31,7 +31,7 @@ Integer.valueOf(5) == Integer.valueOf(5);
 
 Because of how small integers are cached and the same `Integer` objects are returned. Of course this is implementation specific.
 
-## Operators are special too
+## Operators are special too!
 
 Operators in Java work by combining one (for unary operators) or two (for binary operators) operands of compatible types into a result of the same type as one of the operand. Only primitives (and String for `+`) are usuable with operators, or their Object equivalent, through auto-unboxing.
 
@@ -73,7 +73,7 @@ As I mentionned, I have use other languages, because all languages have unique f
 
 ### `void`
 
-There is no such thing as a void type. There is `None`, but it can be affected to a variable
+There is no such thing as a `void` type, nor as a return type. There is `None`, but it can be affected to any variable, and is simply a `null` pointer. It is implicitely returned by functions that have otherwise not returned anything.
 
 ### Primitives
 
@@ -81,7 +81,7 @@ There is no such thing. There are literals, which allow you to express certain t
 
 ### Operators
 
-Operators are shorthand for functions. This is really neat. Because there are no primitives, all things are objects, and all objects have methods. And because Python ducktypes and does not need interfaces, all you need to do is implement the function matching your operator. For example the `+=` operator (in-place addition) is implemented by the `__iadd__` function.
+Operators are shorthand for functions. This is *really neat*. Because there are no primitives, all things are objects, and all objects have methods. And because Python ducktypes and does not need interfaces, all you need to do is implement the function matching your operator. For example the `+=` operator (in-place addition) is implemented by the `__iadd__` function.
 
 Also, because operators are functions and are also defined in the `operator` module, you can refer to them, and use them in higher-order functions: `functools.reduce(operator.iadd, [1,2,3])`
 
@@ -95,10 +95,31 @@ Are a type in python. The have properties, and even functions.
 
 ## JavaScript
 
-It's weird. But function is a type like others
+### `void`
 
-> I think I can safely say that nobody understands JavaScript prototypes
->
-> --<cite>Richard Feynman</cite>
+Return statement are not mandatory, and return types are not a thing, so nothing more to say here.
 
-- All types can be used with operators. big wat, though.
+### Primitives
+
+Some types are represented by [primitives](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) similarly to Java. Fortunately, the dynamic typing prevents us from having to worry about it.
+
+### Operators
+
+All types can be used with all operators. But watch your step. For fun, try things like
+
+```javascript
+[] + []
+[] + {}
+{} + []
+{} + {}
+```
+
+### Functions
+
+> Every function in JavaScript is a Function object.
+
+in [Mozilla functions reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
+
+### `Array`
+
+The basic list type in JavaScript is Array. To use other types, define it yourself, or use a library. There is no indication to the developer, however what type of list (or, come to that, of what type of variable at all) they are receiving in a function, but it is generally admitted that unless indicated otherwise, `Array` is used.
