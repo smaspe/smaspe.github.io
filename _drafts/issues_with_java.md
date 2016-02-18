@@ -2,9 +2,7 @@ I have been working with Java for about 12 years, starting with Java 2. I have b
 
 There are a few things that are frustrating when writing Java that are not present in other languages.
 
-Here is my
-
-# Top 5
+# Here is my Top 5
 
 ## `void` is special
 
@@ -37,7 +35,9 @@ Because of how small integers are cached and the same `Integer` objects are retu
 
 Operators in Java work by combining one (for unary operators) or two (for binary operators) operands of compatible types into a result of the same type as one of the operand. Only primitives (and String for `+`) are usuable with operators, or their Object equivalent, through auto-unboxing.
 
-This means you can't use an operator with generic objects. Your operands have to be of the proper type, and they have to be so at compile time.
+This means you cannot use an operator with generic objects. Your operands have to be of the proper type, and they have to be so at compile time.
+
+And also that means that you cannot refer to an operator, because it is not a function.
 
 ## Functions as first-class objects
 
@@ -45,7 +45,7 @@ To access a function and learn things about it, like its return type and its arg
 
 With Java 8, there are function references, lambdas, and functional interfaces. It is much better, but still not perfect.
 
-// TODO more stuff
+While [Functional Interfaces](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html) provide a way to reference a function, they do not provide direct access to the function itself. You still need a functional interface that matches your function's signature to create a variable that holds it.
 
 ## `List` is broken
 
@@ -67,13 +67,31 @@ This is why I always tend to try to accept the most generic interface I *know* I
 
 # How other languages do it
 
+As I mentionned, I have use other languages, because all languages have unique features that make them interesting, and it is by comparing languages that I get to see what is specific, what is good, and what I like less about a language.
+
 ## Python
 
-- no such thing
-- operators are shorthand for functions
-- Functions are a type
-- no such things
-- list is morea combination of iterable and subscriptable
+### `void`
+
+There is no such thing as a void type. There is `None`, but it can be affected to a variable
+
+### Primitives
+
+There is no such thing. There are literals, which allow you to express certain types (numbers, lists, dicts, strings, regex...), which is convenient, but all types are objects. Try `(1).__doc__`.
+
+### Operators
+
+Operators are shorthand for functions. This is really neat. Because there are no primitives, all things are objects, and all objects have methods. And because Python ducktypes and does not need interfaces, all you need to do is implement the function matching your operator. For example the `+=` operator (in-place addition) is implemented by the `__iadd__` function.
+
+Also, because operators are functions and are also defined in the `operator` module, you can refer to them, and use them in higher-order functions: `functools.reduce(operator.iadd, [1,2,3])`
+
+### Functions
+
+Are a type in python. The have properties, and even functions.
+
+### List
+
+`list` in python is an array-backed list. Other types of elements you may use are `subscriptable` (can be accessed by key or index) and `iterable` (can be iterated sequentially).
 
 ## JavaScript
 
