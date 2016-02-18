@@ -8,4 +8,6 @@ Typically, here in Montreal, in summer it means getting up at 5am, and going to 
 
 This way, you maximise the time spent awake during the day. And it is all progressive, and it does not care about daylight saving time.
 
-All you have to do is choose what is the duration of your night, and how long after sunrise you want to get up.
+And you don't even need curtains!
+
+All you have to do is choose what is the duration of your night (I need at least a good 8h sleep, but ymmv), and how long after sunrise you want to get up. Choose if you want to see the sun rise everyday, or let the sun light gently wake you.
