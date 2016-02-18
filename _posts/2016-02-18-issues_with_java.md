@@ -1,3 +1,14 @@
+---
+layout: post
+title:  "The Top 5 things I dislike about Java"
+date:   2016-02-09
+tags:
+- java
+- python
+- js
+description: 5 issues I think could be addressed in Java.
+---
+
 I have been working with Java for about 12 years, starting with Java 2. I have been using other languages, Python, JavaScript, C, Swift,...
 
 There are a few things that are frustrating when writing Java that are not present in other languages.
@@ -16,7 +27,7 @@ There is even a [`Void`](https://developer.android.com/reference/java/lang/Void.
 
 ```java
 Integer a = null;
-int b = a; 
+int b = a;
 ```
 
 causes a `NullPointerException` because you can't assign `null` to an `int`.
