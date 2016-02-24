@@ -13,7 +13,7 @@ author:
 
 # Build settings
 markdown: kramdown
-paginate: 10
+paginate: 6
 
 # extras
 gems:
