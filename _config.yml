@@ -1,12 +1,14 @@
 # Site settings
 title: Random things
 description: A few random things about stuff
-baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "https://smaspe.github.io" # the base hostname & protocol for your site
+baseurl: '/'
+url: 'https://smaspe.github.io'
 google_analytics: 'UA-73376281-1'
 
 author:
   github_username:  smaspe
+  #name: 'smaspe'
+  #linkedin_username: smaspe
   #email: smaspe@gmail.com
 
 # Build settings
