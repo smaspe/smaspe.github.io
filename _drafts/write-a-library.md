@@ -9,6 +9,7 @@ Everyone. Companies, individuals, hobbyist, students...
 
 ## Why
 Why are you writing a library? Here a few good reasons, that apply differently depending on who you are:
+
 - Better separation of concern in your code
 - Possibility of peer review
 - Open source is cool. It can be a part of your port-folio, or carry a positive image for a company.
@@ -18,11 +19,13 @@ Why are you writing a library? Here a few good reasons, that apply differently d
 
 ## When
 How do you know when it is time to write a library?
+
 - When there is a component that naturally emerges from your code, and it starts to look like it has a personality
 - When you architecture your project, and realize that one of the module is really independent of the rest
 
 ## How
 There are a few things to do in order to ensure your library is in good shape to put out there.
+
 - Open sourcing it
 - Testing it
 - Making sure you test it (coverage)
