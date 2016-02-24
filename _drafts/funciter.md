@@ -1,34 +1,90 @@
+---
+layout: post
+title:  'Functional Iterables'
+date:   2016-02-23
+tags:
+- java
+- android
+- functional programming
+description: Higer-order functions library for Java 7
+---
 A few month ago, while working on an app, I realized Java was lacking higher-order functions.
 
+# Why
+
 I realized this because of 2 reasons:
-- Around me a lot of people were using JavaScript, and discussing whether to use [Ramda] or [Lodash], both being JavaScript libraries of higer-order functions
-- I had been playing with [retrolambda], which backports in particular lambdas and function references from Java 8
+- Around me a lot of people were using JavaScript, and discussing whether to use [Ramda](http://ramdajs.com/) or [Lodash](https://lodash.com/), both being JavaScript libraries providing higer-order functions
+- I had been playing with [retrolambda](https://github.com/orfjackal/retrolambda), which backports in particular lambdas and function references from Java 8
 
 So, having functions close enough to being [first-class objects]({% post_url 2016-02-09-functional-programming %}), I was in need of higher-order functions to use them.
 
-A few higher-order functions:
+As a reminder, a few common higher-order functions:
 - `map`
 - `filter`
 - `all`
+- `reduce` (more on this one later, in a dedicated post)
 ...
 
-Because I like simple things, the library was going to be based on exising things.
-I needed to be able to use it in code very easily.
-It uses the `Iterable` interface.
-Python uses a similar approach for its `functools` module for [functional programming](https://docs.python.org/dev/howto/functional.html).
-The `Collection` interface extends `Iterable`, so all collections, sets, lists,... could be used there.
-`Iterable` defines only one method, so it is easy and short to implement, and it can be done using a lambda.
+# How
 
-The `FuncIter` class is a [decorator](https://en.wikipedia.org/wiki/Decorator_pattern) to `Iterable`, i.e. it adds features to an existing instance.
+Because I like simple things, there was a few principles:
+- The library should be based on existing things. Less code to write, less bugs.
+- I need to be able to use it in code very easily. The library must be usable in an existing project, and must not shape the project.
+- It must be short and self-explanatory. This is a utility library, it should do what you think it should do, and you shouldn't have to read the documentation.
 
-All functions are instance methods and static methods. You can chain them, or call them in one shot.
+## Existing things
+
+It revolves mostly around the the `Iterable` interface.
+
+The `Collection` interface extends `Iterable`, so all collections, sets, lists,... could be used there. `Iterable` defines only one method, so it is easy and short to implement.
+
+The `FuncIter` class is a [decorator](https://en.wikipedia.org/wiki/Decorator_pattern) to `Iterable`, it adds features to an existing instance. Those features being, of course, the aforementioned higher-order functions.
+
+Because of this, it takes very little code to write a function. As a simple example, here is the basic implementation of `map`:
+
+```java
+public static <T, R> Iterable<R> map(Iterable<T> input, Func<T, R> func) {
+  return () -> new Iterator<R>() {
+      Iterator<T> iter = input.iterator();
+
+      @Override
+      public boolean hasNext() {
+          return iter.hasNext();
+      }
+
+      @Override
+      public R next() {
+          return func.call(iter.next());
+      }
+  };
+}
+```
+(The actual implementation includes a wrapping in the decorator, omitted here for clarity.)
+
+It is a grand total of 5 instructions, and it does exactly what it should do. No ifs, no loop, no error.
+
+## Easily integrated
+
+Integration of the library is easy, as it should be. It is published on [jCenter](https://bintray.com/bintray/jcenter), so it is a matter of one line in your Gradle file (or a few in your Maven file).
+
+As per the code itself, all functions are instance methods and static methods (taking the `Iterable` as the first parameter). You can chain them or call them in one shot.
+
+Because it is a decorator of one of the most common interfaces, and because it also come with a wrapper around `T[]`, you can use it with most of your existing objects.
+
+Now, `Iterable` is usually not the most useful output. This is why there are a few `collect` functions to *collect* the iterable in an `ArrayList` or a `HashMap`.
 
 A quick note on `collect`. This method returns an `ArrayList`, rather than a `List`. I covered that in a [previous article]({% post_url 2016-02-18-issues_with_java %}).
 By returning an `ArrayList`, I guarantee that the returned object is a mutable list, with, for example, a complexity for getting an arbitrary item of `O(1)`.
-It also means that I am not allowed to change it, ever.
+It also means that I am not allowed to change it, ever. But I am OK with that.
 
-The whole library fits in a single file, and has no dependency.
+## Short
 
-It is thoroughly tested, with the tests having 100% coverage, and updates are published on [jCenter](https://bintray.com/bintray/jcenter).
+The whole library fits in a single file, and has no dependency. It is compiled for Java 7 as it is what Android used. If for some reason adding the Gradle dependency or including the jar file is not convenient, you can simply drop the unique source file in your project.
 
-So there you have it, a 300-line library, 100% tested, compatible with Java7, containing the main higher-order functions for your daily functional programming needs.
+Each function itself is only a few lines long. Because of that, reading that piece of code will tell you more clearly what it does than the documentation could.
+
+Because it is so short, I can guarantee that it is thoroughly tested, with the tests having 100% coverage (I am not just saying it, [codecov](https://codecov.io/github/smaspe/FunctionalIterables?branch=master) attests to it).
+
+# Last word
+
+So there you have it, a 300-line library (at the time of the writing), 100% tested, compatible with Java 7, containing the most common higher-order functions for your daily functional programming needs.
