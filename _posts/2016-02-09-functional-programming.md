@@ -7,9 +7,6 @@ tags:
 - functional programming
 description: Functional Programming is nice.
 ---
-
-# Introduction
-
 Functional Programming is nice.
 
 It helps you avoid all those loop, removes lots of conditions, and gets the code clearer as it enables very good separation of concern.

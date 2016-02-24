@@ -5,8 +5,6 @@ date:   2013-07-18
 tags: android demo game
 description: Designing a board game using LibGDX
 ---
-# Introduction
-
 LibGDX is an android game engine. I choose this one because:
 
 - It is well documented and offers plenty of features

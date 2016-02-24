@@ -1,19 +1,24 @@
 # Site settings
 title: Random things
-#email: smaspe@gmail.com
 description: A few random things about stuff
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "https://smaspe.github.io" # the base hostname & protocol for your site
-github_username:  smaspe
+google_analytics: 'UA-73376281-1'
+
+author:
+  github_username:  smaspe
+  #email: smaspe@gmail.com
 
 # Build settings
 markdown: kramdown
+paginate: 10
 
 # extras
 gems:
   - jekyll-gist
-  - jekyll-sitemap
-  - jekyll-seo-tag
+  - jekyll-paginate
 
 kramdown:
   input: GFM
+
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock']

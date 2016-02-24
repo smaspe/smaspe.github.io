@@ -3,10 +3,8 @@ layout: post
 title:  "Storage is simple – Part 1, SQL"
 date:   2013-07-09
 tags: android demo sqlite
-description: A quick take on how to design a very small storage library 
+description: A quick take on how to design a very small storage library
 ---
-# Introduction
-
 A lot of apps use SQLite, usually to store data from webservice, most of the time, modern webservices are JSON RESTful APIs.
 
 Without the help of a library, this lead to a tremendous amount of boilerplate code, repeated and almost identical from an application to another: create and update a database, create model to access the webservice, map the data in database, make requests helpers...

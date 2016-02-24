@@ -5,8 +5,6 @@ date:   2013-08-06
 tags: android demo FA-SO-Q
 description: Where the author goes on a journey to bring the JSON data into the grand ListView
 ---
-# Introduction
-
 A group of question often seen on [StackOverflow](https://www.stackoverflow.com) is about inserting data fetched from a webservice into a `ListView`. Several examples exist, but I find they are often too chatty, and a number of mistakes can be found in them.
 
 This is therefore my attempt at a clear, precise, and complete demonstration of implementing such a feature.

@@ -5,8 +5,6 @@ date:   2013-06-03
 tags: android demo
 description: Simple tasks using the Volley library
 ---
-# Introduction
-
 A few days ago, during the Google I/O, Ficus Kilkpatrick presented Volley. Volley is an HTTP library that aims at removing lots of boilerplate code, simplifying the handling of images in lists, be faster, abstract the complexity of one or another HTTP client.
 
 The presentation is here: <https://developers.google.com/events/io/sessions/325304728>

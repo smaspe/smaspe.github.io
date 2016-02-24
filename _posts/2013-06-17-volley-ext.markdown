@@ -5,8 +5,6 @@ date:   2013-06-17
 tags: android demo
 description: Extending Volley for fun and profit
 ---
-# Introduction
-
 In [the previous Volley-related post]({% post_url  2013-06-06-volley-part2 %}), I mentioned some reservations in some more complex use cases.
 
 Volley, in its current state, is not convenient when you need to:

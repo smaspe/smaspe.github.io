@@ -5,9 +5,7 @@ date:   2013-06-04
 tags: android tips
 description: Avoid a simple localization mistake by explicitly using a Locale
 ---
-# Introduction
-
-This post is about a simple mistake that can be made in the use of String.format. To illustrate this very common mistake, some android code from the `ContactsProvider`.
+About a simple mistake that can be made in the use of `String.format`. To illustrate this very common mistake, some android code from the `ContactsProvider`.
 
 This code can be found here: <https://android.googlesource.com/platform/packages/providers/ContactsProvider/>
 
