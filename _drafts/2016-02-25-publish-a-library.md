@@ -13,7 +13,7 @@ There are a few questions you should be asking yourself.
 # What
 What library. What does it do, why is it different/more relevant than existing libraries, how is it useful to other people. Jesse Wilson said during one of his presentations that you should not write yet another JSON parsing library. But then he presented [moshi](https://github.com/square/moshi).
 
-A new library can be a different approach to a known problem that suits you better. Or a totally new thing. Or an SDK to use another of your products.
+A new library can be a different approach to a known problem that suits you better. Or a totally new thing. Or an SDK to use another of your products. Or a bunch of things you often need in a project, and that you think fit together as a consistent entity.
 
 # Who
 Everyone, really. Companies, individuals, hobbyist, students...
@@ -55,4 +55,4 @@ A single test that passes is not a very good guarantee. Try to aim for 100% cove
 To help people use it (including yourself), as most modern build systems have dependency management integrated with publication systems. (`npm` for JavaScript, `pip` for Python, `maven` for Java...)
 
 # Example
-I recently published a Java/Android library of higer-order functions for functional programming. It is a Java library, and uses Gradle as build system, so most of the information here are related to that. For shortness, it is described in a separate article, [to be published]({% post_url publish-android-library %})
+I recently published a Java/Android library of higer-order functions for functional programming. It is a Java library, and uses Gradle as build system, so most of the information here are related to that. It is described in a separate article, [to be published]({% post_url publish-android-library %}).
