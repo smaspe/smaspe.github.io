@@ -55,4 +55,4 @@ A single test that passes is not a very good guarantee. Try to aim for 100% cove
 To help people use it (including yourself), as most modern build systems have dependency management integrated with publication systems. (`npm` for JavaScript, `pip` for Python, `maven` for Java...)
 
 # Example
-I recently published a Java/Android library of higer-order functions for functional programming. It is a Java library, and uses Gradle as build system, so most of the information here are related to that. It is described in a separate article, [to be published](/).
+I recently published a Java/Android library of higer-order functions for functional programming. It is a Java library, and uses Gradle as build system, so most of the information here are related to that. It is described in a separate [article]({% post_url 2016-02-27-publish-android-library %}).
