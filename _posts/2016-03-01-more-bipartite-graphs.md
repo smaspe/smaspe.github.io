@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "More bipartite graphs"
+date:   2016-03-01
+tags:
+- algorithm
+description: CodeFights company bots like puzzles
+---
 Yesterday, on [CodeFights](https://codefights.com/), against a company bot, I was confronted to an interesting problem. I will try as much as possible to avoid revealing which company that was and what problem that was.
 
 It can be formulated like this:
@@ -21,3 +29,5 @@ And indeed it does. The problem asked is simply to find if a [maximum matching](
 The solution is therefore to measure is the cardinal of the **maximum matching** is the same as the cardinal of the set `V`.
 
 An link to an implementation of the Hopcroft-Karp algorithm, which computes the maximum matching of a bipartite graph can be found at the end of the Cat vs Dog problem article.
+
+Maximal matchings are very useful to solve optimization problem where you have to find the better arrangement for a set of elements to another set.
