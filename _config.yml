@@ -1,6 +1,6 @@
 # Site settings
-title: Random things
-description: A few random things about stuff
+title: Mostly Android
+description: Also, algorithms, programming and open-source
 baseurl: '/'
 url: 'https://smaspe.github.io'
 google_analytics: 'UA-73376281-1'
