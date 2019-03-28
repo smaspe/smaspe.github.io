@@ -16,7 +16,7 @@ markdown: kramdown
 paginate: 6
 
 # extras
-gems:
+plugins:
   - jekyll-gist
   - jekyll-paginate
 
