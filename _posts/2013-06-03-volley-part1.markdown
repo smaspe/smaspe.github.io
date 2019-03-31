@@ -3,6 +3,8 @@ layout: post
 title:  "A Volley introduction - Part 1"
 date:   2013-06-03
 tags: android demo
+categories:
+- Volley Tutorial
 description: Simple tasks using the Volley library
 ---
 A few days ago, during the Google I/O, Ficus Kilkpatrick presented Volley. Volley is an HTTP library that aims at removing lots of boilerplate code, simplifying the handling of images in lists, be faster, abstract the complexity of one or another HTTP client.

@@ -3,6 +3,8 @@ layout: post
 title:  "An extension to Volley"
 date:   2013-06-17
 tags: android demo
+categories:
+- Volley Tutorial
 description: Extending Volley for fun and profit
 ---
 In [the previous Volley-related post]({% post_url  2013-06-06-volley-part2 %}), I mentioned some reservations in some more complex use cases.

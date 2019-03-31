@@ -3,6 +3,8 @@ layout: post
 title:  "A Volley introduction - Part 2"
 date:   2013-06-06
 tags: android demo
+categories:
+- Volley Tutorial
 description: More advanced use of Volley
 ---
 Following the previous post, a slightly more complete demo of Volley. Past the trivial make-a-JSON-request use case, this post will show what happens when you want to add headers, authentication, body... and use custom requests.
