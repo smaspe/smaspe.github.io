@@ -1,17 +1,30 @@
 ---
 layout: default
 ---
-<article class="post-container post-container--single">
-  <header class="post-header">
-    <div class="post-meta">
-      <time datetime="{{ page.date | date: "%-d %b %Y" }}" class="post-meta__date date">{{ page.date | date: "%-d %b %Y" }}</time> &#8226; <span class="post-meta__tags">on {% for tag in page.tags %}<a href="{{ site.url }}/tags/#{{ tag }}">{{ tag }}</a> {% endfor %}</span>
-    </div>
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+<article>
+    <header>
+        <span class="post-meta-text">
+            <time datetime="{{ post.date | date: "%B %-d, %Y" }}">
+                {{ page.date | date: "%B %-d, %Y" }}
+            </time><em> by </em><a href="/about/">{{ site.author.name }}</a>
+        </span>
 
-  <section class="post">
-    {{ content }}
-  </section>
-  {% if page.comments != false and site.disqus_shortname %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
+        <h1>
+            <div>{{ page.title }}</div>
+        </h1>
+
+        <span class="post-meta-text">
+            {% for tag in page.tags %}
+            <a href="/tags/#{{ tag | slugify }}">#{{ tag }}</a>
+            {% endfor %}
+        </span>
+
+        <h2 class="page-subtitle">{{ page.description }}</h2>
+    </header>
+    <section class="post-content">
+        {{ content }}
+    </section>
+    <footer class="author">
+        {% include author.html %}
+    </footer>
 </article>
-{% if page.comments != false %}{% include disqus.html %}{% endif %}

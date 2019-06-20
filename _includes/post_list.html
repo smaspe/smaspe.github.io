@@ -1,0 +1,34 @@
+<div class="post-list">
+    {% for post in include.posts %}	
+        <div class="post-list-item">
+            <a href="{{ post.url | relative_url }}" class="post-list-item-link">
+                <h3 class="post-title">
+                    {{ post.title }}
+                </h3>
+                <div class="post-description">
+                    {% if post.description %}
+                        {{ post.description }}
+                    {% else %}
+                        {{ post.excerpt | strip_html}}
+                    {% endif %}
+                </div>
+            </a>
+            <div class="post-meta post-meta-text">
+                <div>
+                    <time datetime="{{ post.date | date: "%B %-d, %Y" }}">
+                        {{ post.date | date: "%B %-d, %Y" }}
+                    </time>
+                    {% assign tags_size = post.tags | size %}
+                    {% if tags_size != 0 %}
+                        <em>in</em>
+                    {% endif %}
+                    <span>
+                        {% for tag in post.tags %}
+                        <a href="/tags/#{{ tag | slugify }}">#{{ tag }}</a>
+                        {% endfor %}
+                    </span>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

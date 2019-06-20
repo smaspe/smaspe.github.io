@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+@import "zenburn";
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Source+Code+Pro');
+
+// Colors
+$dark-grey: rgba($color: #000000, $alpha: 0.84);
+$light-grey: rgba($color: #000000, $alpha: 0.54);
+$lighter-grey: rgba($color: #000000, $alpha: 0.03);
+$max-width: 760px;
+
+// Basics
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+}
+
+main {
+    max-width: $max-width;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+}
+
+pre,
+code {
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+code {
+    font-family: 'Source Code Pro', monospace;
+}
+
+p {
+    text-align: justify;
+}
+
+// Defaults
+
+header {
+    margin-top: 110px;
+
+    h1 {
+        margin: 0;
+        font-size: 4em;
+        font-family: "Helvetica", "serif";
+        letter-spacing: -1px;
+        font-weight: normal;
+        max-width: calc(100vw - 40px);
+        width: calc((#{$max-width} / 2) - 40px + 50vw);
+
+        div {
+            max-width: 1000px;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    span {
+        margin: 20px;
+    }
+}
+
+a {
+    color: $dark-grey;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// All pages
+
+.page-title a {
+    text-decoration: none;
+}
+
+.page-subtitle {
+    color: $light-grey;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1em;
+
+    a {
+        color: inherit;
+    }
+}
+
+// Post list
+
+.post-list-item {
+    padding-top: 15px;
+    padding-bottom: 30px;
+
+    .post-list-item-link {
+        text-decoration: none;
+    }
+
+    .post-title {
+        line-height: 1.1;
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    .post-description {
+        text-align: justify;
+        margin: 0;
+        margin-top: 9px;
+        line-height: 1.2;
+        color: $light-grey;
+    }
+}
+
+// Post meta
+
+.post-meta {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.post-meta-text {
+    letter-spacing: 1px;
+    color: $light-grey;
+}
+
+.post-content {
+    margin-bottom: 100px;
+}
+
+// Author
+
+.author {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    a {
+        text-decoration: underline;
+    }
+
+    padding: 40px 60px;
+    background: $lighter-grey;
+}

@@ -1,5 +1,5 @@
 # Site settings
-title: Mostly Android
+title: Mostly Android (but also more)
 description: Also, algorithms, programming and open-source
 baseurl: '/'
 url: 'https://smaspe.github.io'
@@ -7,20 +7,18 @@ google_analytics: 'UA-73376281-1'
 
 author:
   github_username:  smaspe
-  #name: 'smaspe'
+  so_username:  671543
+  name: 'smaspe'
   #linkedin_username: smaspe
   #email: smaspe@gmail.com
 
 # Build settings
 markdown: kramdown
-paginate: 6
+highlighter: rouge
 
 # extras
 plugins:
   - jekyll-gist
-  - jekyll-paginate
 
-kramdown:
-  input: GFM
 
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'uno']

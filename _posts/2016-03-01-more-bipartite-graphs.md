@@ -28,6 +28,6 @@ And indeed it does. The problem asked is simply to find if a [maximum matching](
 
 The solution is therefore to measure is the cardinal of the **maximum matching** is the same as the cardinal of the set `V`.
 
-An link to an implementation of the Hopcroft-Karp algorithm, which computes the maximum matching of a bipartite graph can be found at the end of the Cat vs Dog problem article.
+A link to an implementation of the Hopcroft-Karp algorithm, which computes the maximum matching of a bipartite graph can be found at the end of the Cat vs Dog problem article.
 
 Maximal matchings are very useful to solve optimization problem where you have to find the better arrangement for a set of elements to another set.
