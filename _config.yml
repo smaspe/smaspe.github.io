@@ -1,6 +1,6 @@
 # Site settings
-title: Mostly Android (but also more)
-description: Also, algorithms, programming and open-source
+title: Idle thoughts of a fellow developer
+#description: Also, algorithms, programming and open-source
 baseurl: '/'
 url: 'https://smaspe.github.io'
 
