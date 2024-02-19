@@ -6,7 +6,7 @@
 // Colors
 $dark-grey: rgba($color: #000000, $alpha: 0.84);
 $light-grey: rgba($color: #000000, $alpha: 0.54);
-$lighter-grey: rgba($color: #000000, $alpha: 0.03);
+$lighter-grey: rgba($color: #000000, $alpha: 0.05);
 $max-width: 760px;
 
 // Basics
@@ -25,13 +25,14 @@ main {
 
 pre,
 code {
-    white-space: pre-wrap;
     word-break: break-all;
     word-wrap: break-word;
 }
 
 code {
     font-family: 'Source Code Pro', monospace;
+    white-space: nowrap;
+    background: $lighter-grey;
 }
 
 p {
