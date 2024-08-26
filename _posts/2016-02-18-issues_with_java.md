@@ -8,6 +8,7 @@ tags:
 - js
 description: 5 issues I think could be addressed in Java.
 ---
+
 I have been working with Java for about 12 years, starting with Java 2. I have been using other languages, Python, JavaScript, C, Swift,...
 
 There are a few things that are frustrating when writing Java that are not present in other languages.
@@ -61,9 +62,10 @@ While [Functional Interfaces](https://docs.oracle.com/javase/8/docs/api/java/uti
 
 [`List`](https://docs.oracle.com/javase/8/docs/api/java/util/List.html) is an interface for ordered collections. You can iterate on it, or access the elements based on their position.
 
-But a `List` does not tell you if it is mutable or not. In other words, all the `add` and `remove` operations are marked *(optional operation)*.
+But a `List` does not tell you if it is mutable or not. In other words, all the `add` and `remove` operations are marked _(optional operation)_.
 
 For example:
+
 ```java
 List<String> strings = Arrays.asList("one", "two", "three");
 strings.add("four");
@@ -73,7 +75,7 @@ Throws an `UnsupportedOperationException`. Whenever you receive a `List` as a pa
 
 `List` is also very generic in the sense that it does not give any indication of how is performing the underlying implementation. Every operation in a `List` has a complexity that ranges from `O(1)` to usually `O(n)` depending on what type of list it is. See [Big-O notation](http://bigocheatsheet.com/) for each type of list. Not knowing which list is used prevents from knowing the complexity of an algorithm.
 
-This is why I always tend to try to accept the most generic interface I *know* I can work with (i.e., not `List` if I need to `add` to it), but return the most specific type I can commit to. My methods never return `List`, unless I really need to. (Typically returning the result from `Arrays.asList`). In which case, the returned `List` should not be considered mutable.
+This is why I always tend to try to accept the most generic interface I _know_ I can work with (i.e., not `List` if I need to `add` to it), but return the most specific type I can commit to. My methods never return `List`, unless I really need to. (Typically returning the result from `Arrays.asList`). In which case, the returned `List` should not be considered mutable.
 
 # How other languages do it
 
@@ -91,7 +93,7 @@ There is no such thing. There are literals, which allow you to express certain t
 
 ### Operators
 
-Operators are shorthand for functions. This is *really neat*. Because there are no primitives, all things are objects, and all objects have methods. And because Python ducktypes and does not need interfaces, all you need to do is implement the function matching your operator. For example the `+=` operator (in-place addition) is implemented by the `__iadd__` function.
+Operators are shorthand for functions. This is _really neat_. Because there are no primitives, all things are objects, and all objects have methods. And because Python ducktypes and does not need interfaces, all you need to do is implement the function matching your operator. For example the `+=` operator (in-place addition) is implemented by the `__iadd__` function.
 
 Also, because operators are functions and are also defined in the `operator` module, you can refer to them, and use them in higher-order functions: `functools.reduce(operator.iadd, [1,2,3])`
 
