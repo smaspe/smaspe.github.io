@@ -4,6 +4,8 @@ title:  "TypeScript is lying to you (part I)"
 date:   2023-10-17
 tags: typescript
 description: When a supposedly typed language is not so typed after all
+categories:
+- The lies of TypeScript
 ---
 
 # Context
