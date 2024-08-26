@@ -3,7 +3,9 @@ layout: post
 title:  "TypeScript is lying to you (part III)"
 date:   2024-08-26
 tags: typescript
-description: What is even `this`?
+description: What is even "this"?
+categories:
+- The lies of TypeScript
 ---
 
 # Context
