@@ -34,7 +34,7 @@ const material: Record<string, string> = {
 const other = material["Wolf"];
 ```
 
-Here, `other` is of type `string`. But its value is actually `undefined`. It's correct type is `string | undefined`.
+Here, `other` is of type `string`. But its value is actually `undefined`. Its correct type is `string | undefined`.
 
 In other languages, requesting an invalid index throws an error.
 
