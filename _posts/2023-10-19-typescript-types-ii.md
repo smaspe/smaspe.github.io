@@ -97,6 +97,3 @@ For unlimited types, like `string` or `number`, any number of keys is ok, and al
 It's confusing.
 
 Next time: `this` is not always what you think `this` is.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU0OTcyMTEzXX0=
--->
