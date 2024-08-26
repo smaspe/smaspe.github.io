@@ -84,10 +84,13 @@ Records don't have such a thing.
 
 For `Record`, it matters because depending on the type of the key, it behaves differently.
 
-For limited types, like unions of literals, it stricitly enforces that the `Record` can only have those keys, but must have all of them.
+For limited types, like unions of literals, it strictly enforces that the `Record` can only have those keys, but must have all of them.
 
 For unlimited types, like `string` or `number`, any number of keys is ok, and all values are assumed to have the right type.
 
 It's confusing.
 
 Next time: `this` is not always what you think `this` is.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbOTU0OTcyMTEzXX0=
+-->
