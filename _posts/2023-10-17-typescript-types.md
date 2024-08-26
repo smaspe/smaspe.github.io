@@ -10,7 +10,7 @@ description: When a supposedly typed language is not so typed after all
 
 TypeScript is presented, [ by the authors](https://www.typescriptlang.org/]), as "a strongly typed programming language".
 
-For anyone who has worked with other strongly typed languages, like Java, Kotlin, C#, this normally means that types are checked before runtime, and guaranteed, unless the users *explicitely* tries something dangerous like casting.
+For anyone who has worked with other strongly typed languages, like Java, Kotlin, C#, this normally means that types are checked before runtime, and guaranteed, unless the users _explicitely_ tries something dangerous like casting.
 
 In TypeScript however, there are several ways of ending, without being warned, with completely wrong types at runtime.
 
@@ -18,7 +18,7 @@ This article presents one. There are more, which will be the subjects of more ar
 
 # The **issue** with `any`
 
-There are a few ways to break the type system in TypeScript, but for ńow, I'm focussing on the fact that `any` can be *implicitely* casted into anything else.
+There are a few ways to break the type system in TypeScript, but for ńow, I'm focussing on the fact that `any` can be _implicitely_ casted into anything else.
 
 No-one in their right mind would, on purpose and for anything other than a throw-away script, write something like this:
 
