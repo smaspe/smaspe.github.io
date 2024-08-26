@@ -80,6 +80,12 @@ Arrays have `.at()` function, which types the output as `string | undefined`. (T
 
 Records don't have such a thing.
 
+# How to fix it
+
+TypeScript has lots of options in `tsconfig`. The one relevant for this case is [`--noUncheckedIndexedAccess`](https://www.typescriptlang.org/tsconfig#noUncheckedIndexedAccess).
+
+Enabling this option will make indexed access return optional values. I wish TypeScript would just have this enabled by default.
+
 # Why does it matter
 
 For `Record`, it matters because depending on the type of the key, it behaves differently.
