@@ -4,6 +4,8 @@ title:  "TypeScript is lying to you (part II)"
 date:   2023-10-19
 tags: typescript
 description: More adventures in finding inconsistencies in types
+categories:
+- The lies of TypeScript
 ---
 
 # Context
