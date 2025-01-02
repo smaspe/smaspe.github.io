@@ -8,8 +8,7 @@ document.addEventListener("alpine:init", () => {
     isLoading: false,
     error: "",
 
-    async getSchedule(event) {
-      event.preventDefault();
+    async getSchedule() {
       this.isLoading = true;
       this.schedule = [];
       this.error = "";
@@ -23,7 +22,9 @@ document.addEventListener("alpine:init", () => {
         this.schedule = data.departures.map((departure) => ({
           line: departure.line.name,
           direction: departure.direction,
-          departure: departure.when ?? departure.plannedWhen,
+          time: new Date(
+            departure.when ?? departure.plannedWhen
+          ).toLocaleTimeString("sv-en", { hour: "2-digit", minute: "2-digit" }),
         }));
         this.stationName = data.departures[0].stop.name;
 
@@ -53,6 +54,9 @@ document.addEventListener("alpine:init", () => {
         this.selectedLines = urlParams.getAll("selectedLines");
       };
       updateFromUrl();
+      if (this.stationId) {
+        this.getSchedule();
+      }
 
       window.addEventListener("popstate", () => {
         updateFromUrl();
