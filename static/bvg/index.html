@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BVG Next Stops</title>
 
     <script src="https://unpkg.com/alpinejs" defer></script>
@@ -12,12 +14,11 @@
     />
     <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
   </head>
-  <body>
+  <body style="padding: 1rem">
     <main x-data="$store.nextStops">
       <!-- Input field for station ID -->
-      <form @submit="getSchedule">
+      <form @submit="$event.preventDefault(); getSchedule()">
         <input type="text" x-model="stationId" placeholder="Enter station ID" />
-
         <button type="submit">Get Schedule</button>
       </form>
       <!-- Loading indicator -->
@@ -27,7 +28,7 @@
 
       <!-- Display schedule -->
       <div x-show="!isLoading && schedule.length > 0">
-        <h2 x-text="stationName"></h2>
+        <h4 x-text="stationName"></h4>
 
         <!-- Checkboxes for selecting lines -->
         <template x-for="line in lines" :key="line">
@@ -38,7 +39,7 @@
         </template>
 
         <table>
-          <thead>
+          <thead style="white-space: nowrap">
             <tr>
               <th>Line</th>
               <th>Destination</th>
@@ -48,13 +49,9 @@
           <tbody>
             <template x-for="departure in filteredSchedule()">
               <tr>
-                <td x-text="departure.line"></td>
+                <td style="white-space: nowrap" x-text="departure.line"></td>
                 <td x-text="departure.direction"></td>
-                <td>
-                  <span
-                    x-text="new Date(departure.departure).toLocaleTimeString('sv-en', {hour: '2-digit', minute: '2-digit'})"
-                  ></span>
-                </td>
+                <td style="white-space: nowrap" x-text="departure.time"></td>
               </tr>
             </template>
           </tbody>
