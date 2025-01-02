@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BVG Next Stops</title>
+
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="./index.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1/new.min.css"
+    />
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
+  </head>
+  <body>
+    <main x-data="$store.nextStops">
+      <!-- Input field for station ID -->
+      <form @submit="getSchedule">
+        <input type="text" x-model="stationId" placeholder="Enter station ID" />
+
+        <button type="submit">Get Schedule</button>
+      </form>
+      <!-- Loading indicator -->
+      <div x-show="isLoading">
+        <span>Loading...</span>
+      </div>
+
+      <!-- Display schedule -->
+      <div x-show="!isLoading && schedule.length > 0">
+        <h2 x-text="stationName"></h2>
+
+        <!-- Checkboxes for selecting lines -->
+        <template x-for="line in lines" :key="line">
+          <label
+            ><input type="checkbox" :value="line" x-model="selectedLines" />
+            <span x-text="line"></span>
+          </label>
+        </template>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Line</th>
+              <th>Destination</th>
+              <th>Departure</th>
+            </tr>
+          </thead>
+          <tbody>
+            <template x-for="departure in filteredSchedule()">
+              <tr>
+                <td x-text="departure.line"></td>
+                <td x-text="departure.direction"></td>
+                <td>
+                  <span
+                    x-text="new Date(departure.departure).toLocaleTimeString('sv-en', {hour: '2-digit', minute: '2-digit'})"
+                  ></span>
+                </td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+        <!-- No results message -->
+        <div x-show="filteredSchedule().length === 0">
+          <p>No departures found for selected lines.</p>
+        </div>
+      </div>
+
+      <!-- Error message -->
+      <div x-show="error" x-text="error"></div>
+    </main>
+  </body>
+</html>
